@@ -365,23 +365,11 @@ A evolução da plataforma pode contemplar:
 - [ ] Simulador de efetividade de propostas operacionais.
 - [ ] Testes automatizados das principais funcionalidades.
 
-## 🌱 Impacto esperado
-
-O VIGIA busca contribuir para uma abordagem mais preventiva e colaborativa da segurança elétrica.
-
-Ao aproximar a população dos profissionais responsáveis pela infraestrutura, a plataforma pretende facilitar a identificação de riscos, melhorar a organização das ocorrências e apoiar decisões operacionais mais eficientes.
-
-A proposta é transformar informações coletadas no cotidiano em oportunidades de prevenção, proteção da vida e melhoria contínua dos serviços de distribuição de energia.
-
 ## 👨‍💻 Autor
 
 **Guilherme Andrade**
 
 - GitHub: [@Gloterianota349](https://github.com/Gloterianota349)
-
-## 📄 Licença
-
-Não foi identificada uma licença de código aberto definida no repositório. Consulte o proprietário antes de reutilizar ou redistribuir o código.
 
 ---
 
