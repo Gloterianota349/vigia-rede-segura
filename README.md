@@ -1,295 +1,390 @@
-# VigiA: Rede Segura
+# ⚡ VIGIA — Rede Segura
 
-Por favor, faça um protótipo ou MVP para expor minha solução a seguir:
-"VIGIA – Plataforma Inteligente de Vigilância Colaborativa da Rede Elétrica
+### Plataforma Inteligente de Vigilância Colaborativa da Rede Elétrica
 
-Uma plataforma digital colaborativa que conecta população, inteligência artificial e especialistas técnicos para identificar, validar, priorizar e mitigar riscos da rede elétrica em tempo quase real, com foco em prevenção de acidentes, eficiência operacional e transparência pública.
+<p align="center">
+  <strong>Conectando cidadãos, tecnologia e especialistas para identificar riscos e prevenir acidentes na rede elétrica.</strong>
+</p>
 
-Visão geral do funcionamento (fluxo principal)
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-MVP%20em%20desenvolvimento-orange?style=for-the-badge" alt="Status do projeto">
+  <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
+</p>
 
-Denúncia cidadã estruturada
+---
 
-Validação automática por IA (triagem inteligente)
+## 📌 Sobre o projeto
 
-Validação técnica especializada
+O **VIGIA — Rede Segura** é um protótipo de uma plataforma digital de vigilância colaborativa voltada à identificação, classificação e acompanhamento de ocorrências na rede elétrica.
 
-Classificação de risco e priorização
+A proposta é conectar três agentes principais:
 
-Ação operacional da Energisa
+- **População:** registra ocorrências e compartilha informações sobre situações potencialmente perigosas.
+- **Inteligência artificial:** auxilia na triagem e na classificação preliminar dos riscos.
+- **Especialistas técnicos:** analisam as ocorrências, validam as informações e acompanham as ações de atendimento.
 
-Transparência e alerta à população
+A solução busca contribuir para a prevenção de acidentes, a melhoria da eficiência operacional e a transparência na gestão de riscos elétricos.
 
-Análise estratégica e recomendação de soluções
+O projeto foi desenvolvido como um MVP para demonstrar a experiência de utilização e o fluxo operacional da solução.
 
-Esse fluxo fecha o ciclo prevenção → resposta → aprendizado, que é exatamente o que empresas de energia buscam hoje.
+## 🎯 Problema e solução
 
-1. Módulo de Denúncia pela População (Crowdsourcing Estruturado)
-Funcionalidades
+Problemas na infraestrutura elétrica, como cabos rompidos, postes danificados, ligações irregulares e transformadores com defeito, podem representar riscos significativos à população.
 
-Denúncia obrigatoriamente com:
+O VIGIA propõe um fluxo colaborativo para facilitar a comunicação dessas situações e organizar seu acompanhamento.
 
-Categoria (ex.: fio solto, ligação irregular, poste danificado, risco à vida, etc.)
+**Fluxo conceitual:**
 
-Foto obrigatória
+```mermaid
+flowchart TD
+    A["👥 Cidadão identifica um risco"] --> B["📸 Registro da ocorrência"]
+    B --> C["🤖 Triagem preliminar"]
+    C --> D["🧑‍🔧 Validação técnica"]
+    D --> E["⚡ Priorização e atendimento"]
+    E --> F["📊 Acompanhamento da ocorrência"]
+    F --> G["🛡️ Prevenção e aprendizado"]
+```
 
-Localização automática (GPS)
+## ✨ Funcionalidades implementadas
 
-Interface simples (app e web), com linguagem acessível.
+### 1. 🏠 Página inicial
 
-Opção de denúncia anônima (especialmente importante para casos de “gato”).
+Apresenta a proposta da plataforma e seus principais objetivos.
 
-Benefício para a Energisa
+- Apresentação institucional do VIGIA.
+- Indicadores demonstrativos de ocorrências e riscos prevenidos.
+- Explicação visual do fluxo de funcionamento.
+- Acesso rápido ao formulário de denúncia e ao painel técnico.
+- Elementos visuais animados e interface responsiva.
 
-Ampliação massiva da capacidade de monitoramento sem custo de campo.
+### 2. 📸 Registro de denúncias
 
-Detecção precoce de riscos antes de acidentes graves.
+Permite que o cidadão registre situações potencialmente perigosas na rede elétrica.
 
-2. Validação Automática por IA (Primeiro Filtro)
-O que a IA analisa
+**Categorias disponíveis:**
 
-Imagem:
+| Categoria | Descrição |
+|---|---|
+| Fio solto / caído | Cabos fora de posição ou próximos ao solo |
+| Ligação irregular | Conexões elétricas não autorizadas |
+| Poste danificado | Estruturas inclinadas ou comprometidas |
+| Risco à vida | Situações com potencial de perigo imediato |
+| Transformador | Problemas em transformadores |
+| Árvore na rede | Vegetação em contato com a rede elétrica |
+| Iluminação pública | Falhas na iluminação |
+| Cabo partido | Condutores rompidos |
 
-Identificação de padrões visuais (fio caído, proximidade do solo, faísca, ligação irregular, proximidade de pessoas).
+**Recursos disponíveis:**
 
-Texto da denúncia:
+- Seleção da categoria da ocorrência.
+- Campo para descrição detalhada.
+- Upload de fotografia com pré-visualização.
+- Informação de localização demonstrativa.
+- Opção de denúncia anônima.
+- Validação dos campos obrigatórios.
+- Geração de protocolo para a ocorrência registrada.
 
-Coerência entre categoria escolhida e descrição.
+### 3. 🤖 Triagem preliminar simulada
 
-Detecção de denúncias duplicadas ou inconsistentes.
+Após o envio da denúncia, o sistema apresenta uma tela de processamento e gera uma avaliação preliminar.
 
-Resultado da IA
+O protótipo demonstra:
 
-Classificação:
+- Classificação da ocorrência.
+- Sugestão de categoria.
+- Nível de risco.
+- Indicador de confiança.
+- Descrição de possíveis elementos identificados.
+- Verificação demonstrativa de duplicidade.
 
-Válida
-
-Provavelmente válida
-
-Inválida / inconsistência
-
-Sugestão automática de tipo de ocorrência e nível preliminar de risco.
-
-👉 Aqui a IA não decide sozinha — ela prioriza e organiza, reduzindo carga humana.
-
-3. Validação Técnica Especializada (Segundo Filtro)
-Atuação do especialista da Energisa
-
-Visualiza:
-
-Foto
-
-Categoria
-
-Avaliação da IA
-
-Histórico do local
-
-Confirma:
-
-Se a ocorrência é real
-
-Classificação final de risco:
-
-Baixo
-
-Médio
-
-Alto
-
-Crítico (risco imediato à vida)
-
-Define:
-
-Prazo máximo recomendado de atendimento
-
-Tipo de equipe necessária
-
-Benefício
-
-Garante confiabilidade técnica.
-
-Evita alarmes falsos e uso indevido da plataforma.
-
-4. Painel Operacional da Energisa (Gestão de Ocorrências)
-Funcionalidades
-
-Quadro Kanban ou lista:
-
-Pendentes
-
-Em atendimento
-
-Resolvidas
-
-Filtros por:
-
-Região
-
-Tipo
-
-Classificação de risco
-
-Tempo em aberto
-
-SLA automático baseado no nível de risco.
-
-Ganho real
-
-Priorização objetiva.
-
-Redução de acidentes e de custos emergenciais.
-
-5. Mapa Público de Riscos (Transparência e Prevenção)
-Visualização
-
-Mapa com:
-
-Local das ocorrências pendentes
-
-Tipo
-
-Classificação de risco
-
-Versões:
-
-Interna (Energisa) – dados completos
-
-Pública (população) – dados resumidos e educativos
-
-Importante
-
-Não expõe dados sensíveis.
-
-Foca em prevenção e cuidado, não em culpabilização.
-
-6. Sistema de Alertas Georreferenciados à População
-Regras de notificação
-
-Raio de 3 km:
-
-Alerta informativo (“há uma ocorrência elétrica na sua região”).
-
-Raio de 100 m:
-
-Alerta crítico (“perigo – mantenha distância”).
-
-Tipos de alerta
-
-Push notification
-
-SMS (opcional)
-
-Avisos no app
-
-Impacto
-
-Redução direta do risco à vida.
-
-Educação passiva e contínua da população.
-
-7. Módulo Analítico e de Relatórios Inteligentes
-Filtros avançados
-
-Data
-
-Região
-
-Tipo de ocorrência
-
-Classificação de risco
-
-Status
-
-Frequência por área
-
-Relatórios gerados
-
-Áreas mais críticas
-
-Tipos de ocorrência mais comuns por região
-
-Correlação entre período do ano e tipo de risco
-
-Tempo médio de resolução
-
-Uso estratégico
-
-Planejamento de manutenção preventiva.
-
-Alocação eficiente de recursos.
-
-Base concreta para decisões regulatórias e investimentos.
-
-8. Inteligência Estratégica e Recomendação de Soluções
-O que o sistema faz
-
-Analisa:
-
-Histórico de ocorrências
-
-Tipos recorrentes
-
-Regiões com reincidência
-
-Identifica padrões:
-
-Ex.: regiões com alto índice de “fio solto” após chuvas
-
-Ex.: áreas com reincidência de ligações irregulares
-
-Saída do sistema
-
-Sugestões de soluções mais eficazes para cada local:
-
-Troca de rede aérea por isolada
-
-Intensificação de fiscalização
-
-Ações educativas
-
-Mudanças estruturais
-
-9. Simulador de Propostas da Energisa (Índice de Efetividade)
-Funcionamento
-
-Técnico da Energisa insere:
-
-Região
-
-Proposta de ação (ex.: reforço da rede, campanha educativa, troca de postes)
-
-O sistema:
-
-Cruza a proposta com dados históricos semelhantes
-
-Analisa resultados passados
-
-Gera um índice percentual de efetividade estimada
-
-Exemplo
-
-“Essa proposta tem 78% de chance de reduzir ocorrências semelhantes em até 12 meses.”
-
-⚠️ Importante: sempre apresentado como estimativa, não garantia.".
-Se possível, para utilizar como histórico de dados e ocorrência, pegue dados da internet.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/391c4baf-c9b6-4fcb-ae06-26206a6c23c8).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+**Importante:** nesta versão, a classificação é produzida por regras locais em TypeScript, considerando a categoria selecionada e palavras-chave na descrição. Não existe integração com um modelo de inteligência artificial ou processamento real de imagens.
+
+### 4. 🧑‍🔧 Painel técnico
+
+Interface destinada à visualização e ao acompanhamento das ocorrências.
+
+**Indicadores demonstrativos:**
+
+- Ocorrências pendentes.
+- Ocorrências em atendimento.
+- Ocorrências resolvidas.
+- Tempo médio de resposta.
+- Distribuição dos registros por nível de risco.
+
+**Quadro de acompanhamento:**
+
+O painel organiza as ocorrências em quatro etapas:
+
+1. Pendente de IA.
+2. Validação técnica.
+3. Em atendimento.
+4. Resolvida.
+
+Ao selecionar uma ocorrência, o usuário pode visualizar seus detalhes, consultar a avaliação preliminar e realizar ações de acompanhamento, como confirmar o atendimento ou rejeitar o registro.
+
+### 5. 🗺️ Mapa de riscos
+
+Apresenta as ocorrências em um mapa interativo utilizando Leaflet e OpenStreetMap.
+
+**Recursos disponíveis:**
+
+- Visualização geográfica das ocorrências.
+- Marcadores diferenciados por nível de risco.
+- Filtros por categoria.
+- Filtros por classificação de risco.
+- Filtros por situação da ocorrência.
+- Informações adicionais ao selecionar um marcador.
+- Alternância entre visão interna e visão pública demonstrativa.
+
+### 6. 📊 Visualização de indicadores
+
+O protótipo apresenta indicadores e gráficos para demonstrar como informações sobre as ocorrências podem auxiliar no acompanhamento operacional.
+
+Os dados incluem distribuição de riscos, quantidade de registros por situação e indicadores gerais de desempenho.
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+O projeto utiliza tecnologias modernas do ecossistema JavaScript e TypeScript.
+
+| Tecnologia | Aplicação |
+|---|---|
+| React 18 | Construção da interface |
+| TypeScript | Tipagem e organização do código |
+| Vite | Ambiente de desenvolvimento e build |
+| Tailwind CSS | Estilização responsiva |
+| shadcn/ui | Componentes de interface |
+| Radix UI | Componentes acessíveis |
+| React Router DOM | Navegação entre páginas |
+| Zustand | Gerenciamento de estado |
+| TanStack React Query | Infraestrutura de gerenciamento de consultas |
+| Framer Motion | Animações e transições |
+| Leaflet | Mapas interativos |
+| React Leaflet | Integração do Leaflet com React |
+| Recharts | Visualização de gráficos |
+| Lucide React | Ícones |
+| Vitest | Infraestrutura de testes |
+| ESLint | Análise estática e padronização |
+
+## 🏗️ Arquitetura e organização
+
+O projeto utiliza uma arquitetura organizada por páginas, componentes reutilizáveis, dados e gerenciamento de estado.
+
+```text
+vigia-rede-segura/
+│
+├── public/
+│   ├── favicon.ico
+│   ├── placeholder.svg
+│   └── robots.txt
+│
+├── src/
+│   │
+│   ├── components/
+│   │   ├── Navbar.tsx
+│   │   ├── NavLink.tsx
+│   │   └── ui/
+│   │       └── Componentes reutilizáveis
+│   │
+│   ├── data/
+│   │   ├── mockData.ts
+│   │   ├── store.ts
+│   │   └── types.ts
+│   │
+│   ├── hooks/
+│   │   ├── use-mobile.tsx
+│   │   └── use-toast.ts
+│   │
+│   ├── lib/
+│   │   └── utils.ts
+│   │
+│   ├── pages/
+│   │   ├── LandingPage.tsx
+│   │   ├── DenunciaPage.tsx
+│   │   ├── ResultadoPage.tsx
+│   │   ├── PainelPage.tsx
+│   │   ├── MapaPage.tsx
+│   │   ├── Index.tsx
+│   │   └── NotFound.tsx
+│   │
+│   ├── test/
+│   │   ├── example.test.ts
+│   │   └── setup.ts
+│   │
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── App.css
+│   └── index.css
+│
+├── index.html
+├── package.json
+├── package-lock.json
+├── tailwind.config.ts
+├── tsconfig.json
+├── vite.config.ts
+└── vitest.config.ts
+```
+
+### Organização dos principais módulos
+
+- `pages/`: páginas e funcionalidades principais da aplicação.
+- `components/`: componentes compartilhados e elementos de interface.
+- `data/`: modelos, dados demonstrativos e gerenciamento de estado.
+- `hooks/`: hooks reutilizáveis.
+- `lib/`: funções auxiliares.
+- `test/`: configuração e exemplos de testes.
+
+## 🔄 Gerenciamento de dados
+
+O gerenciamento de estado é realizado com **Zustand**, por meio do arquivo `src/data/store.ts`.
+
+O sistema mantém:
+
+- Lista de ocorrências.
+- Dados da última denúncia registrada.
+- Informações de classificação preliminar.
+- Atualização do status das ocorrências.
+
+Os dados demonstrativos são definidos em `src/data/mockData.ts`, que gera 25 ocorrências distribuídas por cidades como João Pessoa, Campina Grande, Recife, Natal, Maceió, Aracaju e Teresina.
+
+A aplicação utiliza dados locais e demonstrativos. Não há, nesta versão, persistência em banco de dados ou integração com uma API externa.
+
+## 🚀 Como executar o projeto
+
+### Pré-requisitos
+
+Antes de começar, você precisará ter instalado:
+
+- [Node.js](https://nodejs.org/) — versão compatível com Vite 5.
+- npm — gerenciador de pacotes incluído com Node.js.
+- Git.
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/Gloterianota349/vigia-rede-segura.git
+```
+
+### 2. Entre na pasta do projeto
+
+```bash
+cd vigia-rede-segura
+```
+
+### 3. Instale as dependências
+
+```bash
+npm install
+```
+
+### 4. Execute o ambiente de desenvolvimento
+
+```bash
 npm run dev
 ```
+
+O Vite disponibilizará o endereço local apresentado no terminal. Na configuração atual, a porta padrão é `8080`.
+
+### 5. Gere a versão de produção
+
+```bash
+npm run build
+```
+
+### 6. Visualize a versão de produção localmente
+
+```bash
+npm run preview
+```
+
+## 🧪 Testes e qualidade de código
+
+O projeto possui configuração para testes com Vitest e análise estática com ESLint.
+
+**Executar os testes:**
+
+```bash
+npm run test
+```
+
+**Executar os testes em modo de observação:**
+
+```bash
+npm run test:watch
+```
+
+**Executar o ESLint:**
+
+```bash
+npm run lint
+```
+
+## ⚠️ Limitações atuais do protótipo
+
+O VIGIA está em estágio de MVP demonstrativo. Algumas funcionalidades descritas na visão original ainda precisam ser desenvolvidas para que a plataforma possa operar em um ambiente real.
+
+| Funcionalidade | Situação atual |
+|---|---|
+| Registro de denúncias | Implementado localmente |
+| Upload e pré-visualização de fotos | Implementado |
+| Denúncia anônima | Demonstrada na interface |
+| Localização GPS | Simulada com coordenadas fixas |
+| Triagem por inteligência artificial | Simulada por regras locais |
+| Análise real de imagens | Não implementada |
+| Detecção real de duplicatas | Não implementada |
+| Validação técnica | Fluxo demonstrativo |
+| Painel de acompanhamento | Implementado com dados locais |
+| Mapa interativo | Implementado com dados demonstrativos |
+| Banco de dados | Não integrado |
+| Autenticação e controle de acesso | Não implementados |
+| Notificações push ou SMS | Não implementadas |
+| Integração com concessionárias | Não implementada |
+| Relatórios estratégicos e preditivos | Ainda não implementados |
+
+**Observação:** os indicadores exibidos na página inicial e no painel são demonstrativos, não representam estatísticas operacionais verificadas. As ações realizadas no protótipo não são persistidas após o encerramento da aplicação.
+
+O sistema não deve ser utilizado como ferramenta de emergência ou como substituto dos canais oficiais de atendimento das concessionárias de energia.
+
+## 🔭 Próximos passos
+
+A evolução da plataforma pode contemplar:
+
+- [ ] Integração com banco de dados para persistência das ocorrências.
+- [ ] Autenticação e controle de acesso por perfil.
+- [ ] Geolocalização real utilizando GPS do dispositivo.
+- [ ] Integração com modelos de IA para análise de imagens e descrições.
+- [ ] Detecção de ocorrências duplicadas por proximidade geográfica e similaridade.
+- [ ] Fluxo completo de validação técnica e registro das decisões.
+- [ ] Integração com APIs de concessionárias de energia.
+- [ ] Notificações georreferenciadas para situações de risco.
+- [ ] Painel analítico com indicadores históricos.
+- [ ] Sistema de recomendação de ações preventivas.
+- [ ] Simulador de efetividade de propostas operacionais.
+- [ ] Testes automatizados das principais funcionalidades.
+
+## 🌱 Impacto esperado
+
+O VIGIA busca contribuir para uma abordagem mais preventiva e colaborativa da segurança elétrica.
+
+Ao aproximar a população dos profissionais responsáveis pela infraestrutura, a plataforma pretende facilitar a identificação de riscos, melhorar a organização das ocorrências e apoiar decisões operacionais mais eficientes.
+
+A proposta é transformar informações coletadas no cotidiano em oportunidades de prevenção, proteção da vida e melhoria contínua dos serviços de distribuição de energia.
+
+## 👨‍💻 Autor
+
+**Guilherme Andrade**
+
+- GitHub: [@Gloterianota349](https://github.com/Gloterianota349)
+
+## 📄 Licença
+
+Não foi identificada uma licença de código aberto definida no repositório. Consulte o proprietário antes de reutilizar ou redistribuir o código.
+
+---
+
+<p align="center">
+  <strong>VIGIA — Tecnologia, colaboração e prevenção para uma rede elétrica mais segura. ⚡</strong>
+</p>
